@@ -42,13 +42,19 @@ export function Instructions() {
       <p className="text-sm py-4">{STRINGS.overview[language]}</p>
       <div className="px-4 text-sm">
         {STRINGS.specificInstructions[language].map((instruction) => {
-          return <li>{instruction}</li>;
+          return <li key={instruction}>{instruction}</li>;
         })}
       </div>
       <br />
-      <p className="text-lg text-semibold py-2">{STRINGS.responseChoiceLabel[language]}</p>
+      <p className="text-lg text-semibold py-2">
+        {STRINGS.responseChoiceLabel[language]}
+      </p>
       {STRINGS.choiceInstructions[language].map((instruction) => {
-        return <p className="text-sm">{instruction}</p>;
+        return (
+          <p className="text-sm" key={instruction}>
+            {instruction}
+          </p>
+        );
       })}
     </div>
   );

@@ -21,18 +21,24 @@ import { SpiritualGiftsResults } from "./SpiritualGiftsResults";
 import { SPIRITUAL_GIFTS_QUESTIONS } from "../lib/data";
 import { formSchema } from "@/lib/schema";
 import { BeatLoader } from "react-spinners";
+import { useSearchParams } from "next/navigation";
 
 export function SpiritualGiftsForm() {
   const [hasSubmitted, setHasSubmitted] = useState(false);
+  const searchParams = useSearchParams();
+
+  const debugQuery = searchParams?.get("debug");
+  const defaultQuestionValues =
+    debugQuery === "true"
+      ? [1, 2, 3, 4, 5, 1, 4, 4, 5, 2, 1, 1, 4, 2, 2].concat(Array(65).fill(5))
+      : Array(80).fill("");
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
       email: "",
-      questions: [1, 2, 3, 4, 5, 1, 4, 4, 5, 2, 1, 1, 4, 2, 2].concat(
-        Array(20).fill(3)
-      ),
+      questions: defaultQuestionValues,
     },
   });
   const [isLoading, setIsLoading] = useState(false);

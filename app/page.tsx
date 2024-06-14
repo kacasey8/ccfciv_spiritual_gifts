@@ -3,8 +3,8 @@ import { Instructions } from "./Instructions";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full flex-col max-w-5xl items-center justify-between lg:flex">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 pt-0">
+      <div className="z-10 w-full max-w-5xl flex-col items-center justify-between font-sans lg:flex">
         <Instructions />
         <SpiritualGiftsForm />
       </div>

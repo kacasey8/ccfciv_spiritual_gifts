@@ -203,121 +203,249 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     gift: SpiritualGifts.Shepherding,
     index: 35,
   },
-  // {
-  //   question:
-  //     "I am willing to do whatever it takes to see others come to Christ",
-  // },
-  // { question: "I am attracted to people who are hurting" },
-  // { question: "I am a generous giver" },
-  // { question: "I am able to discover new truths" },
-  // {
-  //   question:
-  //     "I have spiritual insights from Scripture concerning issues and people that compel me to speak out",
-  // },
-  // { question: "I can sense when a person is acting in accord with God’s will" },
-  // { question: "I can trust in God even when things look dark" },
-  // {
-  //   question:
-  //     "I can determine where God wants a group to go and help it get there",
-  // },
-  // {
-  //   question:
-  //     "I have a strong desire to take the gospel to places where it has never been heard",
-  // },
-  // { question: "I enjoy reaching out to new people in my church and community" },
-  // { question: "I am sensitive to the needs of people" },
-  // {
-  //   question:
-  //     "I have been able to make effective and efficient plans for accomplishing the goals of a group",
-  // },
-  // {
-  //   question:
-  //     "I often am consulted when fellow Christians are struggling to make difficult decisions",
-  // },
-  // {
-  //   question:
-  //     "I think about how I can comfort and encourage others in my congregation",
-  // },
-  // { question: "I am able to give spiritual direction to others" },
-  // {
-  //   question:
-  //     "I am able to present the gospel to lost persons in such a way that they accept the Lord and His salvation",
-  // },
-  // {
-  //   question:
-  //     "I possess an unusual capacity to understand the feelings of those in distress",
-  // },
-  // {
-  //   question:
-  //     "I have a strong sense of stewardship based on the recognition that God owns all things",
-  // },
-  // {
-  //   question:
-  //     "I have delivered to other persons messages that have come directly from God",
-  // },
-  // { question: "I can sense when a person is acting under God’s leadership" },
-  // {
-  //   question:
-  //     "I try to be in God’s will continually and be available for His use",
-  // },
-  // {
-  //   question:
-  //     "I feel that I should take the gospel to people who have different beliefs from me",
-  // },
-  // { question: "I have an acute awareness of the physical needs of others" },
-  // {
-  //   question:
-  //     "I am skilled in setting forth positive and precise steps of action",
-  // },
-  // { question: "I like to meet visitors at church and make them feel welcome" },
-  // { question: "I explain Scripture in such a way that others understand it" },
-  // { question: "I can usually see spiritual solutions to problems" },
-  // {
-  //   question:
-  //     "I welcome opportunities to help people who need comfort, consolation, encouragement, and counseling",
-  // },
-  // { question: "I feel at ease in sharing Christ with nonbelievers" },
-  // {
-  //   question:
-  //     "I can influence others to perform to their highest God-given potential",
-  // },
-  // { question: "I recognize the signs of stress and distress in others" },
-  // {
-  //   question:
-  //     "I desire to give generously and unpretentiously to worthwhile projects and ministries",
-  // },
-  // { question: "I can organize facts into meaningful relationships" },
-  // { question: "God gives me messages to deliver to His people" },
-  // {
-  //   question:
-  //     "I am able to sense whether people are being honest when they tell of their religious experiences",
-  // },
-  // {
-  //   question:
-  //     "I enjoy presenting the gospel to persons of other cultures and backgrounds",
-  // },
-  // { question: "I enjoy doing little things that help people" },
-  // { question: "I can give a clear, uncomplicated presentation" },
-  // {
-  //   question:
-  //     "I have been able to apply biblical truth to the specific needs of my church",
-  // },
-  // { question: "God has used me to encourage others to live Christ like lives" },
-  // {
-  //   question:
-  //     "I have sensed the need to help other people become more effective in their ministries",
-  // },
-  // { question: "I like to talk about Jesus to those who do not know Him" },
-  // {
-  //   question:
-  //     "I have the ability to make strangers feel comfortable in my home",
-  // },
-  // {
-  //   question:
-  //     "I have a wide range of study resources and know how to secure information",
-  // },
-  // {
-  //   question:
-  //     "I feel assured that a situation will change for the glory of God even when the situation seem impossible",
-  // },
+  {
+    question:
+      "I am willing to do whatever it takes to see others come to Christ",
+    gift: SpiritualGifts.Evangelism,
+    index: 36,
+  },
+  {
+    question: "I am attracted to people who are hurting",
+    gift: SpiritualGifts.Mercy,
+    index: 37,
+  },
+  { question: "I am a generous giver", gift: SpiritualGifts.Giving, index: 38 },
+  {
+    question: "I am able to discover new truths",
+    gift: SpiritualGifts.Knowledge,
+    index: 39,
+  },
+  {
+    question:
+      "I have spiritual insights from Scripture concerning issues and people that compel me to speak out",
+    gift: SpiritualGifts.Prophecy,
+    index: 40,
+  },
+  {
+    question: "I can sense when a person is acting in accord with God’s will",
+    gift: SpiritualGifts.Discernment,
+    index: 41,
+  },
+  {
+    question: "I can trust in God even when things look dark",
+    gift: SpiritualGifts.Faith,
+    index: 42,
+  },
+  {
+    question:
+      "I can determine where God wants a group to go and help it get there",
+    gift: SpiritualGifts.Leadership,
+    index: 43,
+  },
+  {
+    question:
+      "I have a strong desire to take the gospel to places where it has never been heard",
+    gift: SpiritualGifts.Apostleship,
+    index: 44,
+  },
+  {
+    question: "I enjoy reaching out to new people in my church and community",
+    gift: SpiritualGifts.Hospitality,
+    index: 45,
+  },
+  {
+    question: "I am sensitive to the needs of people",
+    gift: SpiritualGifts.ServiceHelps,
+    index: 46,
+  },
+  {
+    question:
+      "I have been able to make effective and efficient plans for accomplishing the goals of a group",
+    gift: SpiritualGifts.Administration,
+    index: 47,
+  },
+  {
+    question:
+      "I often am consulted when fellow Christians are struggling to make difficult decisions",
+    gift: SpiritualGifts.Wisdom,
+    index: 48,
+  },
+  {
+    question:
+      "I think about how I can comfort and encourage others in my congregation",
+    gift: SpiritualGifts.Exhortation,
+    index: 49,
+  },
+  {
+    question: "I am able to give spiritual direction to others",
+    gift: SpiritualGifts.Shepherding,
+    index: 50,
+  },
+  {
+    question:
+      "I am able to present the gospel to lost persons in such a way that they accept the Lord and His salvation",
+    gift: SpiritualGifts.Evangelism,
+    index: 51,
+  },
+  {
+    question:
+      "I possess an unusual capacity to understand the feelings of those in distress",
+    gift: SpiritualGifts.Mercy,
+    index: 52,
+  },
+  {
+    question:
+      "I have a strong sense of stewardship based on the recognition that God owns all things",
+    gift: SpiritualGifts.Giving,
+    index: 53,
+  },
+  {
+    question:
+      "I have delivered to other persons messages that have come directly from God",
+    gift: SpiritualGifts.Prophecy,
+    index: 54,
+  },
+  {
+    question: "I can sense when a person is acting under God’s leadership",
+    gift: SpiritualGifts.Discernment,
+    index: 55,
+  },
+  {
+    question:
+      "I try to be in God’s will continually and be available for His use",
+    gift: SpiritualGifts.Faith,
+    index: 56,
+  },
+  {
+    question:
+      "I feel that I should take the gospel to people who have different beliefs from me",
+    gift: SpiritualGifts.Apostleship,
+    index: 57,
+  },
+  {
+    question: "I have an acute awareness of the physical needs of others",
+    gift: SpiritualGifts.ServiceHelps,
+    index: 58,
+  },
+  {
+    question:
+      "I am skilled in setting forth positive and precise steps of action",
+    gift: SpiritualGifts.Administration,
+    index: 59,
+  },
+  {
+    question: "I like to meet visitors at church and make them feel welcome",
+    gift: SpiritualGifts.Hospitality,
+    index: 60,
+  },
+  {
+    question: "I explain Scripture in such a way that others understand it",
+    gift: SpiritualGifts.Teaching,
+    index: 61,
+  },
+  {
+    question: "I can usually see spiritual solutions to problems",
+    gift: SpiritualGifts.Wisdom,
+    index: 62,
+  },
+  {
+    question:
+      "I welcome opportunities to help people who need comfort, consolation, encouragement, and counseling",
+    gift: SpiritualGifts.Exhortation,
+    index: 63,
+  },
+  {
+    question: "I feel at ease in sharing Christ with nonbelievers",
+    gift: SpiritualGifts.Evangelism,
+    index: 64,
+  },
+  {
+    question:
+      "I can influence others to perform to their highest God-given potential",
+    gift: SpiritualGifts.Leadership,
+    index: 65,
+  },
+  {
+    question: "I recognize the signs of stress and distress in others",
+    gift: SpiritualGifts.Mercy,
+    index: 66,
+  },
+  {
+    question:
+      "I desire to give generously and unpretentiously to worthwhile projects and ministries",
+    gift: SpiritualGifts.Giving,
+    index: 67,
+  },
+  {
+    question: "I can organize facts into meaningful relationships",
+    gift: SpiritualGifts.Knowledge,
+    index: 68,
+  },
+  {
+    question: "God gives me messages to deliver to His people",
+    gift: SpiritualGifts.Prophecy,
+    index: 69,
+  },
+  {
+    question:
+      "I am able to sense whether people are being honest when they tell of their religious experiences",
+    gift: SpiritualGifts.Discernment,
+    index: 70,
+  },
+  {
+    question:
+      "I enjoy presenting the gospel to persons of other cultures and backgrounds",
+    gift: SpiritualGifts.Apostleship,
+    index: 71,
+  },
+  {
+    question: "I enjoy doing little things that help people",
+    gift: SpiritualGifts.ServiceHelps,
+    index: 72,
+  },
+  {
+    question: "I can give a clear, uncomplicated presentation",
+    gift: SpiritualGifts.Teaching,
+    index: 73,
+  },
+  {
+    question:
+      "I have been able to apply biblical truth to the specific needs of my church",
+    gift: SpiritualGifts.Wisdom,
+    index: 74,
+  },
+  {
+    question: "God has used me to encourage others to live Christ like lives",
+    gift: SpiritualGifts.Exhortation,
+    index: 75,
+  },
+  {
+    question:
+      "I have sensed the need to help other people become more effective in their ministries",
+    gift: SpiritualGifts.Shepherding,
+    index: 76,
+  },
+  {
+    question: "I like to talk about Jesus to those who do not know Him",
+    gift: SpiritualGifts.Evangelism,
+    index: 77,
+  },
+  {
+    question:
+      "I have the ability to make strangers feel comfortable in my home",
+    gift: SpiritualGifts.Hospitality,
+    index: 78,
+  },
+  {
+    question:
+      "I have a wide range of study resources and know how to secure information",
+    gift: SpiritualGifts.Knowledge,
+    index: 79,
+  },
+  {
+    question:
+      "I feel assured that a situation will change for the glory of God even when the situation seem impossible",
+    gift: SpiritualGifts.Faith,
+    index: 80,
+  },
 ];

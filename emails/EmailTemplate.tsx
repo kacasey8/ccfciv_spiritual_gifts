@@ -1,19 +1,19 @@
-import { FormLabel } from "@/components/ui/form";
+import SpiritualGiftsQuestionResults from "@/app/SpiritualGiftsQuestionResults";
 import { SPIRITUAL_GIFTS_QUESTIONS } from "@/lib/data";
-import { formSchema } from "@/lib/schema";
 import { scoreGifts } from "@/lib/scoreGifts";
 
 type EmailTemplateProps = {
   firstName: string;
   lastName: string;
   email: string;
+  language: "english" | "chinese";
   questions: number[];
 };
 
 export function EmailTemplate({
   firstName,
   lastName,
-  email,
+  language,
   questions,
 }: Readonly<EmailTemplateProps>) {
   const hydratedQuestions = questions.map((answer, index) => {
@@ -23,22 +23,27 @@ export function EmailTemplate({
       answer,
     };
   });
-  const scoredGifts = scoreGifts(questions);
+  const scoredGifts = scoreGifts(questions, language);
   return (
     <>
       <h2>
-        Hello {firstName} {lastName},
+        {language === "chinese" ? "你好" : "Hello"} {firstName} {lastName},
       </h2>
       <p>
-        Thank you for completing the Spiritual Gifts Assessment. Below are your
-        results:
+        {language === "chinese"
+          ? "感謝您完成屬靈恩賜評估。以下是您的結果："
+          : "Thank you for completing the Spiritual Gifts Assessment. Below are your results:"}
       </p>
       <p>
-        If you have any questions or need further assistance, feel free to
-        contact us at https://www.ccfciv.org/newcomers.html.
+        {language === "chinese"
+          ? "如果您有任何疑問或需要進一步協助，請隨時與我們聯絡："
+          : "If you have any questions or need further assistance, feel free to contact us at"}{" "}
+        https://www.ccfciv.org/newcomers.html.
       </p>
-      <h3>Assessment Details:</h3>
-      Spiritual Gifts in descending order out of 25:
+      <h3>{language === "chinese" ? "評估詳情：" : "Assessment Details:"}</h3>
+      {language === "chinese"
+        ? "25 項精神恩賜依降序排列："
+        : "Spiritual Gifts in descending order out of 25:"}
       <ol>
         {scoredGifts.map((gift) => {
           return (
@@ -48,15 +53,10 @@ export function EmailTemplate({
           );
         })}
       </ol>
-      <h3>Questions:</h3>
-      <ol>
-        {hydratedQuestions.map((question, index) => (
-          <li key={index}>
-            <b>{question.question}</b>
-            <p>Your answer: {question.answer}</p>
-          </li>
-        ))}
-      </ol>
+      <SpiritualGiftsQuestionResults
+        language={language}
+        hydratedQuestions={hydratedQuestions}
+      />
     </>
   );
 }

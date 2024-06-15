@@ -1,29 +1,36 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SPIRITUAL_GIFTS_QUESTIONS, SpiritualGifts } from "../lib/data";
 import { sum } from "lodash";
 import { scoreGifts } from "@/lib/scoreGifts";
 import { Button } from "@/components/ui/button";
 import { BeatLoader } from "react-spinners";
 import { toast } from "sonner";
+import SpiritualGiftsQuestionResults from "./SpiritualGiftsQuestionResults";
 
 type Props = {
   values: {
     firstName: string;
     lastName: string;
     email: string;
+    language: "english" | "chinese";
     questions: number[];
   };
+  language: "chinese" | "english";
 };
 
-export function SpiritualGiftsResults({ values }: Props) {
-  const seriesData = scoreGifts(values.questions).map((giftScore) => {
+export function SpiritualGiftsResults({ values, language }: Props) {
+  useEffect(() => {
+    // Scrolls to the top of the document when the component mounts
+    window.scrollTo(0, 250);
+  }, []); // Empty dependency array ensures this effect runs only once
+  const seriesData = scoreGifts(values.questions, language).map((giftScore) => {
     return [giftScore.gift, giftScore.score];
   });
   const options = {
     title: {
-      text: "Spiritual Gifts",
+      text: language === "chinese" ? "屬靈恩賜" : "Spiritual Gifts",
     },
     chart: {
       type: "column",
@@ -45,7 +52,9 @@ export function SpiritualGiftsResults({ values }: Props) {
       enabled: false,
     },
     tooltip: {
-      pointFormat: "Score out of 25: <b>{point.y}</b>",
+      pointFormat: `${
+        language === "chinese" ? "滿分 25 分：" : "Score out of 25:"
+      } <b>{point.y}</b>`,
     },
     series: [
       {
@@ -79,18 +88,34 @@ export function SpiritualGiftsResults({ values }: Props) {
 
     setHasSubmitted(true);
   }
+  const hydratedQuestions = values.questions.map((answer, index) => {
+    const question = SPIRITUAL_GIFTS_QUESTIONS[index];
+    return {
+      ...question,
+      answer,
+    };
+  });
   return (
     <div className="flex flex-col items-center gap-4">
       <HighchartsReact highcharts={Highcharts} options={options} />
       {hasSubmitted ? (
-        <div>Sent to {values.email}</div>
+        <div>
+          {language === "chinese" ? "電子郵件發送至" : "Sent to"} {values.email}
+        </div>
       ) : isLoading ? (
         <BeatLoader />
       ) : (
         <Button onClick={onSubmit} type="submit">
-          Email results to {values.email}
+          {language === "chinese"
+            ? "將結果透過電子郵件發送至"
+            : "Email results to"}{" "}
+          {values.email}
         </Button>
       )}
+      <SpiritualGiftsQuestionResults
+        language={language}
+        hydratedQuestions={hydratedQuestions}
+      />
     </div>
   );
 }

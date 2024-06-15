@@ -56,14 +56,16 @@ export default async function handler(
               ...Object.values(SpiritualGifts).map(
                 (_gift, index) => `Gift ${index + 1}`
               ),
-              ...SPIRITUAL_GIFTS_QUESTIONS.map((question) => question.question),
+              ...SPIRITUAL_GIFTS_QUESTIONS.map(
+                (question) => question.question["english"]
+              ),
             ],
           ],
         },
       });
     }
 
-    const scoredGifts = scoreGifts(body.questions);
+    const scoredGifts = scoreGifts(body.questions, body.language);
 
     const response = await sheet.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
@@ -76,7 +78,7 @@ export default async function handler(
             body.firstName,
             body.lastName,
             body.email,
-            "English",
+            body.language,
             ...scoredGifts.map((gift) => `${gift.gift}: ${gift.score}`),
             ...body.questions,
           ],

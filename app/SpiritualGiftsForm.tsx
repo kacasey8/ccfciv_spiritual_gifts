@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -24,7 +24,11 @@ import { BeatLoader } from "react-spinners";
 import { useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 
-export function SpiritualGiftsForm() {
+type Props = {
+  language: "chinese" | "english";
+};
+
+export function SpiritualGiftsForm({ language }: Props) {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const searchParams = useSearchParams();
 
@@ -39,10 +43,15 @@ export function SpiritualGiftsForm() {
       firstName: "",
       lastName: "",
       email: "",
+      language,
       questions: defaultQuestionValues,
     },
   });
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    form.setValue("language", language);
+  }, [language, form]);
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
@@ -65,7 +74,7 @@ export function SpiritualGiftsForm() {
   }
 
   if (hasSubmitted) {
-    return <SpiritualGiftsResults values={form.getValues()} />;
+    return <SpiritualGiftsResults values={form.getValues()} language={language} />;
   }
 
   return (
@@ -76,7 +85,9 @@ export function SpiritualGiftsForm() {
           name="firstName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>First Name</FormLabel>
+              <FormLabel>
+                {language === "chinese" ? "名" : "First Name"}
+              </FormLabel>
               <FormControl>
                 <Input {...field} />
               </FormControl>
@@ -89,7 +100,9 @@ export function SpiritualGiftsForm() {
           name="lastName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Last Name</FormLabel>
+              <FormLabel>
+                {language === "chinese" ? "姓" : "Last Name"}
+              </FormLabel>
               <FormControl>
                 <Input {...field} />
               </FormControl>
@@ -102,7 +115,9 @@ export function SpiritualGiftsForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>
+                {language === "chinese" ? "電子郵件" : "Email"}
+              </FormLabel>
               <FormControl>
                 <Input placeholder="example@gmail.com" {...field} />
               </FormControl>
@@ -119,7 +134,7 @@ export function SpiritualGiftsForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>
-                    {question.index}. {question.question}
+                    {question.index}. {question.question[language]}
                   </FormLabel>
                   <FormControl>
                     <div className="flex flex-row gap-4 items-center">
@@ -145,7 +160,13 @@ export function SpiritualGiftsForm() {
           );
         })}
 
-        {isLoading ? <BeatLoader /> : <Button type="submit">Submit</Button>}
+        {isLoading ? (
+          <BeatLoader />
+        ) : (
+          <Button type="submit">
+            {language === "chinese" ? "提交" : "Submit"}
+          </Button>
+        )}
       </form>
     </Form>
   );

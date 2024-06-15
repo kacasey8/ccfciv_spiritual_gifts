@@ -1,7 +1,14 @@
 import { sum } from "lodash";
-import { SPIRITUAL_GIFTS_QUESTIONS, SpiritualGifts } from "./data";
+import {
+  SPIRITUAL_GIFTS_QUESTIONS,
+  SpiritualGifts,
+  translateSpiritualGift,
+} from "./data";
 
-export function scoreGifts(questions: number[]) {
+export function scoreGifts(
+  questions: number[],
+  language: "english" | "chinese"
+) {
   const gifts = Object.values(SpiritualGifts);
   const hydratedQuestions = questions.map((answer, index) => {
     const question = SPIRITUAL_GIFTS_QUESTIONS[index];
@@ -13,7 +20,7 @@ export function scoreGifts(questions: number[]) {
   return gifts
     .map((gift) => {
       return {
-        gift,
+        gift: translateSpiritualGift(language, gift),
         score: sum(
           hydratedQuestions
             .filter((question) => question.gift === gift)

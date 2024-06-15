@@ -9,6 +9,7 @@ export const formSchema = z.object({
   lastName: z.string().min(1, {
     message: REQUIRED,
   }),
+  language: z.union([z.literal("chinese"), z.literal("english")]),
   email: z
     .string()
     .min(1, { message: REQUIRED })

@@ -25,7 +25,7 @@ export default async function handler(
     });
 
     const mailOptions = {
-      from: "CCFCIV <noreply@ccfciv.org>",
+      from: "CCFCIV <kacasey8@gmail.com>",
       to: body.email,
       subject: "CCFCIV Spiritual Gifts Results",
       html,

@@ -16,9 +16,6 @@ export default async function handler(
     const body = formSchema.parse(req.body);
     const html = render(EmailTemplate(body));
 
-    console.log(process.env.NODEMAILER_EMAIL);
-    console.log(process.env.NODEMAILER_PW);
-
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {

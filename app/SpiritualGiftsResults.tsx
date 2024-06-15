@@ -6,6 +6,7 @@ import { sum } from "lodash";
 import { scoreGifts } from "@/lib/scoreGifts";
 import { Button } from "@/components/ui/button";
 import { BeatLoader } from "react-spinners";
+import { toast } from "sonner";
 
 type Props = {
   values: {
@@ -70,9 +71,11 @@ export function SpiritualGiftsResults({ values }: Props) {
       body: JSON.stringify(values),
     });
 
-    console.log(response.status);
-
     setIsLoading(false);
+    if (response.status !== 200) {
+      toast("Failed to send to email, please try again");
+      return;
+    }
 
     setHasSubmitted(true);
   }

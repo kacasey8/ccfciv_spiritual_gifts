@@ -2,6 +2,7 @@ import { SPIRITUAL_GIFTS_QUESTIONS, SpiritualGifts } from "@/lib/data";
 import { formSchema } from "@/lib/schema";
 import { scoreGifts } from "@/lib/scoreGifts";
 import { google } from "googleapis";
+import moment from "moment-timezone";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
@@ -71,7 +72,7 @@ export default async function handler(
       requestBody: {
         values: [
           [
-            new Date().toISOString(),
+            moment().tz("America/Los_Angeles").format("YYYY-MM-DD HH:mm:ss"),
             body.firstName,
             body.lastName,
             body.email,

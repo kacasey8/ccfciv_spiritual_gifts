@@ -5,7 +5,7 @@ import { Instructions } from "./Instructions";
 import { Suspense, useState } from "react";
 
 export default function Home() {
-  const userLanguage = navigator.language;
+  const userLanguage = typeof window !== "undefined" ? navigator.language : "";
   const [language, setLanguage] = useState<"chinese" | "english">(
     userLanguage.toLocaleLowerCase().includes("ch") ? "chinese" : "english"
   );

@@ -1,6 +1,6 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { SPIRITUAL_GIFTS_QUESTIONS } from "../lib/data";
 import { scoreGifts } from "@/lib/scoreGifts";
 import { Button } from "@/components/ui/button";
@@ -20,10 +20,11 @@ type Props = {
 };
 
 export function SpiritualGiftsResults({ values, language }: Props) {
+  const myRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // Scrolls to the top of the document when the component mounts
-    window.scrollTo(0, 250);
-  }, []); // Empty dependency array ensures this effect runs only once
+    myRef.current?.scrollIntoView();
+  }, [myRef]); // Empty dependency array ensures this effect runs only once
   const seriesData = scoreGifts(values.questions, language).map((giftScore) => {
     return [giftScore.gift, giftScore.score];
   });
@@ -34,6 +35,7 @@ export function SpiritualGiftsResults({ values, language }: Props) {
     chart: {
       type: "column",
     },
+    chartOptions: {},
     xAxis: {
       type: "category",
       labels: {
@@ -94,9 +96,16 @@ export function SpiritualGiftsResults({ values, language }: Props) {
       answer,
     };
   });
+
   return (
-    <div className="flex flex-col items-center gap-4">
-      <HighchartsReact highcharts={Highcharts} options={options} />
+    <div ref={myRef} className="flex flex-col items-center gap-4">
+      <div className="p-8">
+        <HighchartsReact
+          highcharts={Highcharts}
+          options={options}
+          reflow={true}
+        />
+      </div>
       {hasSubmitted ? (
         <div>
           {language === "chinese" ? "電子郵件發送至" : "Sent to"} {values.email}

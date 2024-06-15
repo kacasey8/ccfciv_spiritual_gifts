@@ -10,7 +10,7 @@ export default function Home() {
     userLanguage.toLocaleLowerCase().includes("ch") ? "chinese" : "english"
   );
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 pt-0">
+    <main className="flex min-h-screen flex-col items-center justify-between p-4 md:p-24 pt-0">
       <div className="z-10 w-full max-w-5xl flex-col items-center justify-between font-sans lg:flex">
         <Instructions language={language} setLanguage={setLanguage} />
         <Suspense>

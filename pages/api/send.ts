@@ -1,10 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { Resend } from "resend";
 import { EmailTemplate } from "../../emails/EmailTemplate";
 import { formSchema } from "@/lib/schema";
 import { render } from "@react-email/components";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import nodemailer from "nodemailer";
 
 export default async function handler(
   req: NextApiRequest,
@@ -18,17 +16,22 @@ export default async function handler(
     const body = formSchema.parse(req.body);
     const html = render(EmailTemplate(body));
 
-    const { data, error } = await resend.emails.send({
-      from: "CCFCIV <noreply@resend.dev>",
-      to: [body.email],
-      subject: "Spiritual Gifts Results",
-      html,
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.NODEMAILER_EMAIL,
+        pass: process.env.NODEMAILER_PW,
+      },
     });
 
-    if (error) {
-      console.log(error);
-      return res.status(400).json(error);
-    }
+    const mailOptions = {
+      from: "CCFCIV <noreply@ccfciv.org>",
+      to: body.email,
+      subject: "CCFCIV Spiritual Gifts Results",
+      html,
+    };
+
+    const data = await transporter.sendMail(mailOptions);
 
     res.status(200).json(data);
   } catch (error) {

@@ -1,9 +1,11 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import React from "react";
+import React, { useState } from "react";
 import { SPIRITUAL_GIFTS_QUESTIONS, SpiritualGifts } from "../lib/data";
 import { sum } from "lodash";
 import { scoreGifts } from "@/lib/scoreGifts";
+import { Button } from "@/components/ui/button";
+import { BeatLoader } from "react-spinners";
 
 type Props = {
   values: {
@@ -53,5 +55,39 @@ export function SpiritualGiftsResults({ values }: Props) {
       },
     ],
   };
-  return <HighchartsReact highcharts={Highcharts} options={options} />;
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+
+  async function onSubmit() {
+    setIsLoading(true);
+    const response = await fetch("/api/send", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    });
+
+    console.log(response.status);
+
+    setIsLoading(false);
+
+    setHasSubmitted(true);
+  }
+  return (
+    <div className="flex flex-col items-center gap-4">
+      <HighchartsReact highcharts={Highcharts} options={options} />
+      {hasSubmitted ? (
+        <div>Sent to {values.email}</div>
+      ) : isLoading ? (
+        <BeatLoader />
+      ) : (
+        <Button onClick={onSubmit} type="submit">
+          Email results to {values.email}
+        </Button>
+      )}
+    </div>
+  );
 }

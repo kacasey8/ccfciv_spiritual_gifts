@@ -22,6 +22,7 @@ import { SPIRITUAL_GIFTS_QUESTIONS } from "../lib/data";
 import { formSchema } from "@/lib/schema";
 import { BeatLoader } from "react-spinners";
 import { useSearchParams } from "next/navigation";
+import { toast } from "sonner";
 
 export function SpiritualGiftsForm() {
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -54,9 +55,11 @@ export function SpiritualGiftsForm() {
       body: JSON.stringify(values),
     });
 
-    console.log(response.status);
-
     setIsLoading(false);
+    if (response.status !== 200) {
+      toast("Failed to send to CCFCIV google sheets, please try again");
+      return;
+    }
 
     setHasSubmitted(true);
   }

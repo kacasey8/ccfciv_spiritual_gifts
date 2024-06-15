@@ -21,7 +21,7 @@ export function SpiritualGiftsSlider({ onChange, value }: Props) {
         step={1}
         onChange={onChange}
         //@ts-ignore
-        value={value ?? null}
+        value={value === "" ? null : value}
       />
     </div>
   );

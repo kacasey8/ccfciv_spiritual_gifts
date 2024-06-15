@@ -63,7 +63,7 @@ export function Instructions({ language, setLanguage }: Props) {
   return (
     <div className="flex flex-col py-8">
       <RadioGroup
-        className="flex flex-row"
+        className="flex flex-row py-4"
         onValueChange={setLanguage}
         value={language}
       >

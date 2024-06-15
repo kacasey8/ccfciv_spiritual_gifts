@@ -1,8 +1,7 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import React, { useEffect, useState } from "react";
-import { SPIRITUAL_GIFTS_QUESTIONS, SpiritualGifts } from "../lib/data";
-import { sum } from "lodash";
+import { SPIRITUAL_GIFTS_QUESTIONS } from "../lib/data";
 import { scoreGifts } from "@/lib/scoreGifts";
 import { Button } from "@/components/ui/button";
 import { BeatLoader } from "react-spinners";

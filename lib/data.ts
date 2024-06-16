@@ -66,7 +66,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I am willing to study and prepare for the task of teaching",
-      chinese: "我願意學習教導和準備教學的工作。",
+      chinese: "我願意學習和準備教導事工。",
     },
     gift: SpiritualGifts.Teaching,
     index: 2,
@@ -74,7 +74,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I am able to relate the truths of God to specific situations",
-      chinese: "我能將個別事情與神的真理聯繫在一起。",
+      chinese: "我能將神的真理與特定的情境聯繫起來。",
     },
     gift: SpiritualGifts.Wisdom,
     index: 3,
@@ -82,7 +82,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I have a God-given ability to help others grow in their faith",
-      chinese: "我有恩賜能幫助他人的信仰成長。",
+      chinese: "我有恩賜能幫助他人的靈命成長。",
     },
     gift: SpiritualGifts.Shepherding,
     index: 4,
@@ -91,7 +91,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I possess a special ability to communicate the truth of salvation",
-      chinese: "我有能力與別人講述真正的救恩。",
+      chinese: "我有講述救恩真理的特別能力。",
     },
     gift: SpiritualGifts.Evangelism,
     index: 5,
@@ -99,7 +99,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I have the ability to make critical decisions when necessary",
-      chinese: "我可以在關鍵的時候做出決策的能力。",
+      chinese: "我有在必要时做出关键决策的能力。",
     },
     gift: SpiritualGifts.Leadership,
     index: 6,
@@ -107,7 +107,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I am sensitive to the hurts of people",
-      chinese: "我能敏銳地察覺到別人的傷害。",
+      chinese: "我能敏銳地察覺到別人的傷痛。",
     },
     gift: SpiritualGifts.Mercy,
     index: 7,
@@ -115,7 +115,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I experience joy in meeting needs through sharing possessions",
-      chinese: "當我與別人分享我所擁有的時候，我感到喜樂。",
+      chinese: "當我分享自己的財物滿足了他人需要時，我感到喜樂。",
     },
     gift: SpiritualGifts.Giving,
     index: 8,
@@ -128,7 +128,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I have delivered God’s message of warning and judgment",
-      chinese: "我曾經把有關神的警告和判斷的信息告訴別人。",
+      chinese: "我曾經傳達過有關神的警告和審判的信息。",
     },
     gift: SpiritualGifts.Prophecy,
     index: 10,
@@ -137,7 +137,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I am able to sense the true motivation of persons and movements",
-      chinese: "我能感受到別人和事情背後的真正動機。",
+      chinese: "我能感知人和事背後的真正動機。",
     },
     gift: SpiritualGifts.Discernment,
     index: 11,
@@ -145,7 +145,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I have a special ability to trust God in difficult situations",
-      chinese: "我在困難的情況下仍相信神。",
+      chinese: "我有在困難的情況下信靠神特別能力。",
     },
     gift: SpiritualGifts.Faith,
     index: 12,
@@ -154,7 +154,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I have a strong desire to contribute to the establishment of new churches",
-      chinese: "我渴望用我的一切去建立新的教會。",
+      chinese: "我强烈渴望為建立新教會做出貢獻。",
     },
     gift: SpiritualGifts.Apostleship,
     index: 13,
@@ -163,7 +163,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I take action to meet physical and practical needs rather than merely talking about or planning to help",
-      chinese: "當別人有需要時，我積極採取行動，而不是空談。",
+      chinese: "我採取實際行動幫助有身體或實際需要的人，而不是流於口頭或計劃而已。",
     },
     gift: SpiritualGifts.ServiceHelps,
     index: 14,
@@ -180,7 +180,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I can adapt my guidance to fit the maturity of those working with me",
-      chinese: "我能因應別人的成熟度來調整相關的指導。",
+      chinese: "我能根據同工的成熟度來調整我對他們的指導。",
     },
     gift: SpiritualGifts.Leadership,
     index: 16,
@@ -188,7 +188,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I can delegate and assign meaningful work",
-      chinese: "我能有效地分配有意義的工作。",
+      chinese: "我能有效地委派分配有意義的工作。",
     },
     gift: SpiritualGifts.Administration,
     index: 17,
@@ -196,7 +196,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I have an ability and desire to teach",
-      chinese: "我有能力及渴望從事教導的工作。",
+      chinese: "我有能力及願望從事教導的工作。",
     },
     gift: SpiritualGifts.Teaching,
     index: 18,
@@ -212,7 +212,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I have a natural tendency to encourage others",
-      chinese: "我經常自然地鼓勵他人。",
+      chinese: "我天生會鼓勵他人。",
     },
     gift: SpiritualGifts.Exhortation,
     index: 20,
@@ -238,7 +238,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I am a cheerful giver",
-      chinese: "我是一個開朗的施予者。",
+      chinese: "我樂善好施。",
     },
     gift: SpiritualGifts.Giving,
     index: 23,
@@ -246,7 +246,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I spend time digging into facts",
-      chinese: "我花時間探討事實的真相。",
+      chinese: "我花時間深入研究事實的真相。",
     },
     gift: SpiritualGifts.Knowledge,
     index: 24,
@@ -254,7 +254,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I feel that I have a message from God to deliver to others",
-      chinese: "我的使命是將上帝的訊息傳給他人。",
+      chinese: "我覺得我有從神而來的信息要傳給他人。",
     },
     gift: SpiritualGifts.Prophecy,
     index: 25,
@@ -272,7 +272,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
       english:
         "I am a person of vision (a clear mental portrait of a preferable future given by God)  I am able to communicate vision in such a way that others commit to making the vision a reality",
       chinese:
-        "我看見神的異象（由上帝啟示的未來） 。我能與人分享異象，及將它變為事實。",
+        "我是一個有異象的人（我能看見神所啟示的清晰的未來圖景） 。我能清晰地傳達異象，讓他人致力於實現該異象。",
     },
     gift: SpiritualGifts.Leadership,
     index: 27,
@@ -281,7 +281,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I am willing to yield to God’s will rather than question and waver",
-      chinese: "我願意完全順服神的旨意。(不作任何提問或動搖。)",
+      chinese: "我願意順服神的旨意，而不是質疑或動搖。",
     },
     gift: SpiritualGifts.Faith,
     index: 28,
@@ -290,7 +290,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I would like to be more active in getting the gospel to people in other lands",
-      chinese: "我想更主動地將福音傳給各地的人。",
+      chinese: "我想更積極地將福音傳給其它地方的人。",
     },
     gift: SpiritualGifts.Apostleship,
     index: 29,
@@ -306,7 +306,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I am successful in getting a group to do its work joyfully",
-      chinese: "我可以使小組成員愉快地完成工作。",
+      chinese: "我成功地使一個團隊愉快地完成工作。",
     },
     gift: SpiritualGifts.Administration,
     index: 31,
@@ -314,7 +314,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I am able to make strangers feel at ease",
-      chinese: "我能夠讓陌生人感到放心。",
+      chinese: "我能夠讓陌生人感到舒適。",
     },
     gift: SpiritualGifts.Hospitality,
     index: 32,
@@ -322,7 +322,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I have the ability to plan learning approaches",
-      chinese: "我能計劃學習的方法。",
+      chinese: "我有能力規劃學習方法。",
     },
     gift: SpiritualGifts.Teaching,
     index: 33,
@@ -330,7 +330,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I can identify those who need encouragement",
-      chinese: "我能辨認需要被別人鼓勵的人。",
+      chinese: "34。我能辨認出需要被鼓勵的人。",
     },
     gift: SpiritualGifts.Exhortation,
     index: 34,
@@ -339,7 +339,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I have trained Christians to be more obedient disciples of Christ",
-      chinese: "我有訓練基督徒成為更順服的使徒。",
+      chinese: "我曾訓練基督徒成為更順服基督的門徒。",
     },
     gift: SpiritualGifts.Shepherding,
     index: 35,
@@ -356,7 +356,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I am attracted to people who are hurting",
-      chinese: "我能吸引心靈受傷的人。",
+      chinese: "我關心那些心靈受傷的人。",
     },
     gift: SpiritualGifts.Mercy,
     index: 37,
@@ -381,7 +381,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I have spiritual insights from Scripture concerning issues and people that compel me to speak out",
-      chinese: "我有從聖經而來的眼光看人和事，並逼切地說出有關的問題。",
+      chinese: "我有從聖經而來的有關人和事的屬靈看見，並有負擔要說出來。",
     },
     gift: SpiritualGifts.Prophecy,
     index: 40,
@@ -389,7 +389,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I can sense when a person is acting in accord with God’s will",
-      chinese: "我能察看一個人的行事是否符合神的旨意。",
+      chinese: "我能感知一個人的行事是否符合神的旨意。",
     },
     gift: SpiritualGifts.Discernment,
     index: 41,
@@ -406,7 +406,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I can determine where God wants a group to go and help it get there",
-      chinese: "我可以明白神對小組的心意，並帶領小組把目標實現。",
+      chinese: "我可以確定神給一個團隊的目標，並幫助達成該目標。",
     },
     gift: SpiritualGifts.Leadership,
     index: 43,
@@ -423,7 +423,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I enjoy reaching out to new people in my church and community",
-      chinese: "​​我喜歡主動接觸在教會和社區新來的朋友。",
+      chinese: "​​​我喜歡主動接觸教會和社區中的新人。",
     },
     gift: SpiritualGifts.Hospitality,
     index: 45,
@@ -440,7 +440,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I have been able to make effective and efficient plans for accomplishing the goals of a group",
-      chinese: "我能夠做出一個有效率的計劃把目標完成。",
+      chinese: "我能為達成一個團隊的目標制定有效和高效的計劃。 ",
     },
     gift: SpiritualGifts.Administration,
     index: 47,
@@ -449,7 +449,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I often am consulted when fellow Christians are struggling to make difficult decisions",
-      chinese: "經常有基督徒在困難的時候向我諮詢意見。",
+      chinese: "經常有基督徒在做艱難決策的時候諮詢我的意見。",
     },
     gift: SpiritualGifts.Wisdom,
     index: 48,
@@ -458,7 +458,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I think about how I can comfort and encourage others in my congregation",
-      chinese: "我常思想如何安慰和鼓勵其他會眾。",
+      chinese: "我常思想如何安慰和鼓勵會眾。",
     },
     gift: SpiritualGifts.Exhortation,
     index: 49,
@@ -466,7 +466,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I am able to give spiritual direction to others",
-      chinese: "我能夠給予別人屬靈的方向。",
+      chinese: "我能夠指引別人屬靈的方向。",
     },
     gift: SpiritualGifts.Shepherding,
     index: 50,
@@ -475,7 +475,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I am able to present the gospel to lost persons in such a way that they accept the Lord and His salvation",
-      chinese: "我能夠將福音傳給失喪的人，使他們接受上帝和祂的救恩。",
+      chinese: "我能夠將福音傳給失喪的人，使他們接受神和祂的救恩。",
     },
     gift: SpiritualGifts.Evangelism,
     index: 51,
@@ -484,7 +484,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I possess an unusual capacity to understand the feelings of those in distress",
-      chinese: "我有特殊的能力去明白人的困境/ 苦況。",
+      chinese: "我特別能理解處於困境中的人的感受。",
     },
     gift: SpiritualGifts.Mercy,
     index: 52,
@@ -493,7 +493,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I have a strong sense of stewardship based on the recognition that God owns all things",
-      chinese: "我有管家觀念 (明白神擁有所有的東西)。",
+      chinese: "我有基於萬物屬神所有的管家觀念。",
     },
     gift: SpiritualGifts.Giving,
     index: 53,
@@ -502,7 +502,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I have delivered to other persons messages that have come directly from God",
-      chinese: "我曾將從神直接而來的訊息傳遞給人。",
+      chinese: "我曾將直接從神而來的信息傳遞給人。",
     },
     gift: SpiritualGifts.Prophecy,
     index: 54,
@@ -510,7 +510,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I can sense when a person is acting under God’s leadership",
-      chinese: "我可以感受到一個人是否在神的領導下行事。",
+      chinese: "我可以感知到一個人是否在神的引領下行事。",
     },
     gift: SpiritualGifts.Discernment,
     index: 55,
@@ -519,7 +519,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I try to be in God’s will continually and be available for His use",
-      chinese: "我盡量每天活在神的旨意下，隨時能被祂使用。",
+      chinese: "我盡量每天活在神的旨意下，隨時預備為祂所用。",
     },
     gift: SpiritualGifts.Faith,
     index: 56,
@@ -536,7 +536,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I have an acute awareness of the physical needs of others",
-      chinese: "我能敏銳地察覺到別人的物質需要。",
+      chinese: "我能敏銳地察覺到別人的身體需要。",
     },
     gift: SpiritualGifts.ServiceHelps,
     index: 58,
@@ -545,7 +545,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I am skilled in setting forth positive and precise steps of action",
-      chinese: "我能正面及有效地編排行動時所需的步驟。",
+      chinese: "我擅長制定積極準確的行動步驟。",
     },
     gift: SpiritualGifts.Administration,
     index: 59,
@@ -561,7 +561,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I explain Scripture in such a way that others understand it",
-      chinese: "我以不同的方法解釋聖經，讓別人明白神的話語。",
+      chinese: "我能以他人易懂的方式解釋聖經。",
     },
     gift: SpiritualGifts.Teaching,
     index: 61,
@@ -578,7 +578,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I welcome opportunities to help people who need comfort, consolation, encouragement, and counseling",
-      chinese: "我歡迎不同的機會去幫助別人得到安慰，鼓勵和輔導。",
+      chinese: "我樂於幫助那些需要得到安慰，撫慰，鼓勵和輔導的人。",
     },
     gift: SpiritualGifts.Exhortation,
     index: 63,
@@ -595,7 +595,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I can influence others to perform to their highest God-given potential",
-      chinese: "我可以影響別人，將他們從神所賜的潛力發揮出來。",
+      chinese: "我可以影響別人，幫助他們充分發揮神所賜的潛力。",
     },
     gift: SpiritualGifts.Leadership,
     index: 65,
@@ -603,7 +603,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I recognize the signs of stress and distress in others",
-      chinese: "我察覺到別人的壓力和苦惱。",
+      chinese: "我能察覺到別人有壓力和苦惱的跡象。",
     },
     gift: SpiritualGifts.Mercy,
     index: 66,
@@ -612,7 +612,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I desire to give generously and unpretentiously to worthwhile projects and ministries",
-      chinese: "我渴望能謙遜和慷慨地給予/奉獻在有價值的事工上。",
+      chinese: "我渴望能慷慨地不張揚地捐獻給有價值的項目或事工。",
     },
     gift: SpiritualGifts.Giving,
     index: 67,
@@ -620,7 +620,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I can organize facts into meaningful relationships",
-      chinese: "我可以將不同的事實組織成有意義的關係。",
+      chinese: "我能組織事實，揭示其内在關係和意義。",
     },
     gift: SpiritualGifts.Knowledge,
     index: 68,
@@ -628,7 +628,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "God gives me messages to deliver to His people",
-      chinese: "上帝要我將訊息傳達給祂的子民。",
+      chinese: "神賜我信息，要傳達給祂的子民。",
     },
     gift: SpiritualGifts.Prophecy,
     index: 69,
@@ -637,7 +637,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I am able to sense whether people are being honest when they tell of their religious experiences",
-      chinese: "我能察覺到別人是否誠實地講述他們的宗教經驗。",
+      chinese: "我能感知別人在講述他們的宗教體驗時是否真誠。",
     },
     gift: SpiritualGifts.Discernment,
     index: 70,
@@ -654,7 +654,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I enjoy doing little things that help people",
-      chinese: "我喜歡做小事情去幫助別人。",
+      chinese: "我喜歡做一些小事來幫助別人。",
     },
     gift: SpiritualGifts.ServiceHelps,
     index: 72,
@@ -662,7 +662,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I can give a clear, uncomplicated presentation",
-      chinese: "我可以給一個清楚簡單的簡報。",
+      chinese: "我能做簡單明瞭的報告。",
     },
     gift: SpiritualGifts.Teaching,
     index: 73,
@@ -671,7 +671,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I have been able to apply biblical truth to the specific needs of my church",
-      chinese: "我能夠將聖經真理應用到教會特殊的需求上。",
+      chinese: "我能夠將聖經真理應用到教會的具體需求上。",
     },
     gift: SpiritualGifts.Wisdom,
     index: 74,
@@ -679,7 +679,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "God has used me to encourage others to live Christ like lives",
-      chinese: "神使用我鼓勵他人過一個像基督的生命。",
+      chinese: "神使用我鼓勵他人過一個有基督樣式的生命。",
     },
     gift: SpiritualGifts.Exhortation,
     index: 75,
@@ -688,7 +688,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I have sensed the need to help other people become more effective in their ministries",
-      chinese: "我意識到如何幫助其他人更有效地事奉。",
+      chinese: "76。我覺得有必要幫助別人在事工中提高效率",
     },
     gift: SpiritualGifts.Shepherding,
     index: 76,
@@ -696,7 +696,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I like to talk about Jesus to those who do not know Him",
-      chinese: "我喜歡與非信徒談論耶穌。 ",
+      chinese: "我喜歡與非信徒談論耶穌。",
     },
     gift: SpiritualGifts.Evangelism,
     index: 77,
@@ -705,7 +705,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I have the ability to make strangers feel comfortable in my home",
-      chinese: "我有讓別人在我家感到賓至如歸的能力。",
+      chinese: "我能讓別人在我家感到賓至如歸。",
     },
     gift: SpiritualGifts.Hospitality,
     index: 78,
@@ -714,7 +714,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I have a wide range of study resources and know how to secure information",
-      chinese: "我擁有廣泛的知識，並知道如何從中獲取資料。",
+      chinese: "我擁有廣泛的學習資源，並知道如何獲取信息。",
     },
     gift: SpiritualGifts.Knowledge,
     index: 79,
@@ -723,7 +723,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I feel assured that a situation will change for the glory of God even when the situation seem impossible",
-      chinese: "即使在不可能的情況下，我仍肯定事情會因為神的榮耀而改變。",
+      chinese: "即使情形看起來不可能，我仍確信局勢會因著神的榮耀而改變。",
     },
     gift: SpiritualGifts.Faith,
     index: 80,

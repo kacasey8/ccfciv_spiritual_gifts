@@ -66,7 +66,7 @@ export default async function handler(
       });
     }
 
-    const scoredGifts = scoreGifts(body.questions, body.language);
+    const scoredGifts = scoreGifts(body.questions, "english");
 
     const response = await sheet.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,

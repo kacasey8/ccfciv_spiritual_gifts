@@ -75,7 +75,10 @@ export function SpiritualGiftsForm({ language }: Props) {
 
   if (hasSubmitted) {
     return (
-      <SpiritualGiftsResults values={form.getValues()} language={language} />
+      <SpiritualGiftsResults
+        values={formSchema.parse(form.getValues())}
+        language={language}
+      />
     );
   }
 

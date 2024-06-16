@@ -74,7 +74,9 @@ export function SpiritualGiftsForm({ language }: Props) {
   }
 
   if (hasSubmitted) {
-    return <SpiritualGiftsResults values={form.getValues()} language={language} />;
+    return (
+      <SpiritualGiftsResults values={form.getValues()} language={language} />
+    );
   }
 
   return (
@@ -146,6 +148,7 @@ export function SpiritualGiftsForm({ language }: Props) {
                         max={5}
                         step={1}
                         {...field}
+                        onWheel={(e) => e.currentTarget.blur()}
                       />
                       <SpiritualGiftsSlider
                         onChange={field.onChange}

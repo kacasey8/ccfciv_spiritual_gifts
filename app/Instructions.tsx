@@ -30,7 +30,7 @@ const STRINGS = {
       "請回答所有問題，不要跳過任何題目。",
       "作答期間不要與人談話，請自己作答。",
       "按照自己的節奏作答。",
-      "此處記錄的回答僅用於事工目的，不會與長老、執事和事工領袖以外的任何人分享。"
+      "此處記錄的回答僅用於事工目的，不會與長老、執事和事工領袖以外的任何人分享。",
     ],
   },
   responseChoiceLabel: {
@@ -87,7 +87,7 @@ export function Instructions({ language, setLanguage }: Props) {
         })}
       </div>
       <br />
-      <p className="text-lg text-semibold py-2">
+      <p className="text-2xl text-bold py-2">
         {STRINGS.responseChoiceLabel[language]}
       </p>
       {STRINGS.choiceInstructions[language].map((instruction) => {

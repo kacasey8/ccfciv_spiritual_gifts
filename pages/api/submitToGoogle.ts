@@ -56,6 +56,7 @@ export default async function handler(
               ...Object.values(SpiritualGifts).map(
                 (_gift, index) => `Gift ${index + 1}`
               ),
+              ...Object.values(SpiritualGifts).map((gift) => gift),
               ...SPIRITUAL_GIFTS_QUESTIONS.map(
                 (question) => question.question["english"]
               ),
@@ -80,6 +81,11 @@ export default async function handler(
             body.email,
             body.language,
             ...scoredGifts.map((gift) => `${gift.gift}: ${gift.score}`),
+            ...Object.values(SpiritualGifts).map(
+              (gift) =>
+                scoredGifts.find((scoredGift) => scoredGift.gift === gift)
+                  ?.score
+            ),
             ...body.questions,
           ],
         ],

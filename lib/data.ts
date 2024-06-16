@@ -163,7 +163,8 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
     question: {
       english:
         "I take action to meet physical and practical needs rather than merely talking about or planning to help",
-      chinese: "我採取實際行動幫助有身體或實際需要的人，而不是流於口頭或計劃而已。",
+      chinese:
+        "我採取實際行動幫助有身體或實際需要的人，而不是流於口頭或計劃而已。",
     },
     gift: SpiritualGifts.ServiceHelps,
     index: 14,

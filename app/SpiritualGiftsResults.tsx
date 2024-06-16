@@ -1,12 +1,14 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import React, { useEffect, useRef, useState } from "react";
-import { SPIRITUAL_GIFTS_QUESTIONS } from "../lib/data";
+import { SPIRITUAL_GIFTS_QUESTIONS, translateSpiritualGift } from "../lib/data";
 import { scoreGifts } from "@/lib/scoreGifts";
 import { Button } from "@/components/ui/button";
 import { BeatLoader } from "react-spinners";
 import { toast } from "sonner";
 import SpiritualGiftsQuestionResults from "./SpiritualGiftsQuestionResults";
+
+import { Chart } from "react-google-charts";
 
 type Props = {
   values: {
@@ -23,49 +25,51 @@ export function SpiritualGiftsResults({ values, language }: Props) {
   const myRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    myRef.current?.scrollIntoView();
+    setTimeout(() => {
+      myRef.current?.scrollIntoView();
+    }, 100);
   }, [myRef]); // Empty dependency array ensures this effect runs only once
   const seriesData = scoreGifts(values.questions, language).map((giftScore) => {
-    return [giftScore.gift, giftScore.score];
+    return [giftScore.gift, giftScore.score, null];
   });
-  const options = {
-    title: {
-      text: language === "chinese" ? "屬靈恩賜" : "Spiritual Gifts",
-    },
-    chart: {
-      type: "column",
-    },
-    chartOptions: {},
-    xAxis: {
-      type: "category",
-      labels: {
-        autoRotation: [-45, -90],
-        style: {
-          fontSize: "13px",
-          fontFamily: "Verdana, sans-serif",
-        },
-      },
-    },
-    legend: {
-      enabled: false,
-    },
-    credits: {
-      enabled: false,
-    },
-    tooltip: {
-      pointFormat: `${
-        language === "chinese" ? "滿分 25 分：" : "Score out of 25:"
-      } <b>{point.y}</b>`,
-    },
-    series: [
-      {
-        dataSorting: {
-          enabled: true,
-        },
-        data: seriesData,
-      },
-    ],
-  };
+  // const options = {
+  //   title: {
+  //     text: language === "chinese" ? "屬靈恩賜" : "Spiritual Gifts",
+  //   },
+  //   chart: {
+  //     type: "column",
+  //   },
+  //   chartOptions: {},
+  //   xAxis: {
+  //     type: "category",
+  //     labels: {
+  //       autoRotation: [-45, -90],
+  //       style: {
+  //         fontSize: "13px",
+  //         fontFamily: "Verdana, sans-serif",
+  //       },
+  //     },
+  //   },
+  //   legend: {
+  //     enabled: false,
+  //   },
+  //   credits: {
+  //     enabled: false,
+  //   },
+  //   tooltip: {
+  //     pointFormat: `${
+  //       language === "chinese" ? "滿分 25 分：" : "Score out of 25:"
+  //     } <b>{point.y}</b>`,
+  //   },
+  //   series: [
+  //     {
+  //       dataSorting: {
+  //         enabled: true,
+  //       },
+  //       data: seriesData,
+  //     },
+  //   ],
+  // };
 
   const [isLoading, setIsLoading] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -97,13 +101,44 @@ export function SpiritualGiftsResults({ values, language }: Props) {
     };
   });
 
+  const data = [
+    [
+      "Element",
+      language === "chinese" ? "滿分 25 分" : "Score out of 25",
+      {
+        sourceColumn: 0,
+        role: "annotation",
+        type: "string",
+        calc: "stringify",
+      },
+    ],
+    ...seriesData,
+  ];
+
+  const options = {
+    title: language === "chinese" ? "屬靈恩賜" : "Spiritual Gifts",
+    chartArea: { width: "100%", height: "400px", left: 80 },
+    legend: { position: "none" },
+    hAxis: {
+      title: language === "chinese" ? "滿分 25 分" : "Score out of 25",
+      minValue: 0,
+      maxValue: 25,
+      viewWindow: {
+        min: 0,
+        max: 25,
+      },
+    },
+  };
+
   return (
     <div ref={myRef} className="flex flex-col items-center gap-4">
-      <div className="p-8">
-        <HighchartsReact
-          highcharts={Highcharts}
+      <div>
+        <Chart
+          chartType="BarChart"
+          width="100%"
+          height="400px"
+          data={data}
           options={options}
-          reflow={true}
         />
       </div>
       {hasSubmitted ? (

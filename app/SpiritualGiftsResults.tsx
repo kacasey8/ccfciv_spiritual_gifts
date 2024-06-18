@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import SpiritualGiftsQuestionResults from "./SpiritualGiftsQuestionResults";
 
 import { Chart } from "react-google-charts";
+import SpiritualGiftsExplanationLink from "./SpiritualGiftsExplanationLink";
 
 type Props = {
   values: {
@@ -32,44 +33,6 @@ export function SpiritualGiftsResults({ values, language }: Props) {
   const seriesData = scoreGifts(values.questions, language).map((giftScore) => {
     return [giftScore.gift, giftScore.score, null];
   });
-  // const options = {
-  //   title: {
-  //     text: language === "chinese" ? "屬靈恩賜" : "Spiritual Gifts",
-  //   },
-  //   chart: {
-  //     type: "column",
-  //   },
-  //   chartOptions: {},
-  //   xAxis: {
-  //     type: "category",
-  //     labels: {
-  //       autoRotation: [-45, -90],
-  //       style: {
-  //         fontSize: "13px",
-  //         fontFamily: "Verdana, sans-serif",
-  //       },
-  //     },
-  //   },
-  //   legend: {
-  //     enabled: false,
-  //   },
-  //   credits: {
-  //     enabled: false,
-  //   },
-  //   tooltip: {
-  //     pointFormat: `${
-  //       language === "chinese" ? "滿分 25 分：" : "Score out of 25:"
-  //     } <b>{point.y}</b>`,
-  //   },
-  //   series: [
-  //     {
-  //       dataSorting: {
-  //         enabled: true,
-  //       },
-  //       data: seriesData,
-  //     },
-  //   ],
-  // };
 
   const [isLoading, setIsLoading] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -82,7 +45,7 @@ export function SpiritualGiftsResults({ values, language }: Props) {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(values),
+      body: JSON.stringify({ ...values, language }),
     });
 
     setIsLoading(false);
@@ -103,7 +66,7 @@ export function SpiritualGiftsResults({ values, language }: Props) {
 
   const data = [
     [
-      "Element",
+      "Gift",
       language === "chinese" ? "滿分 25 分" : "Score out of 25",
       {
         sourceColumn: 0,
@@ -117,7 +80,7 @@ export function SpiritualGiftsResults({ values, language }: Props) {
 
   const options = {
     title: language === "chinese" ? "屬靈恩賜" : "Spiritual Gifts",
-    chartArea: { width: "100%", height: "400px", left: 80 },
+    chartArea: { width: "100%", height: "400px", left: 200 },
     legend: { position: "none" },
     hAxis: {
       title: language === "chinese" ? "滿分 25 分" : "Score out of 25",
@@ -141,6 +104,7 @@ export function SpiritualGiftsResults({ values, language }: Props) {
           options={options}
         />
       </div>
+      <SpiritualGiftsExplanationLink language={language} />
       {hasSubmitted ? (
         <div>
           {language === "chinese" ? "電子郵件發送至" : "Sent to"} {values.email}

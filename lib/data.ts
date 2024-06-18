@@ -4,13 +4,13 @@ export enum SpiritualGifts {
   Wisdom = "Wisdom",
   Leadership = "Leadership",
   Knowledge = "Knowledge",
-  Prophecy = "Prophecy",
+  Prophecy = "Prophecy / Preaching",
   Discernment = "Discernment",
   Exhortation = "Exhortation",
   Shepherding = "Shepherding",
   Faith = "Faith",
   Evangelism = "Evangelism",
-  Apostleship = "Apostleship",
+  Apostleship = "Apostleship(missionary/church plant)",
   ServiceHelps = "Service Helps",
   Mercy = "Mercy",
   Giving = "Giving",
@@ -24,26 +24,40 @@ export function translateSpiritualGift(
   if (language === "english") {
     return gift;
   }
-  const index = Object.values(SpiritualGifts).indexOf(gift);
-  const chineseValues = [
-    "領導能力",
-    "管理能力",
-    "教学恩賜",
-    "知识指數",
-    "智慧指數",
-    "预言能力",
-    "辨别能力",
-    "向外傳講能力",
-    "牧养恩賜",
-    "信仰基礎",
-    "傳播福音恩賜",
-    "使徒主導恩賜",
-    "服务/帮助他人",
-    "怜悯他人",
-    "奉獻心",
-    "接待恩賜",
-  ];
-  return chineseValues[index];
+  if (gift === SpiritualGifts.Administration) {
+    return "治理 (管理)";
+  } else if (gift === SpiritualGifts.Teaching) {
+    return "教導";
+  } else if (gift === SpiritualGifts.Wisdom) {
+    return "智慧";
+  } else if (gift === SpiritualGifts.Leadership) {
+    return "領導";
+  } else if (gift === SpiritualGifts.Knowledge) {
+    return "知識";
+  } else if (gift === SpiritualGifts.Prophecy) {
+    return "說預言／講道";
+  } else if (gift === SpiritualGifts.Discernment) {
+    return "分辨";
+  } else if (gift === SpiritualGifts.Exhortation) {
+    return "勸慰 (勸誡 / 忠告)";
+  } else if (gift === SpiritualGifts.Shepherding) {
+    return "牧養";
+  } else if (gift === SpiritualGifts.Faith) {
+    return "信心";
+  } else if (gift === SpiritualGifts.Evangelism) {
+    return "傳福音";
+  } else if (gift === SpiritualGifts.Apostleship) {
+    return "植堂／宣教";
+  } else if (gift === SpiritualGifts.ServiceHelps) {
+    return "服事／幫助";
+  } else if (gift === SpiritualGifts.Mercy) {
+    return "憐憫 (救濟)";
+  } else if (gift === SpiritualGifts.Giving) {
+    return "給予(慷慨)";
+  } else if (gift === SpiritualGifts.Hospitality) {
+    return "款待 (親切,殷勤的接待)";
+  }
+  return gift;
 }
 
 export type Question = {

@@ -1,3 +1,4 @@
+import SpiritualGiftsExplanationLink from "@/app/SpiritualGiftsExplanationLink";
 import SpiritualGiftsQuestionResults from "@/app/SpiritualGiftsQuestionResults";
 import { SPIRITUAL_GIFTS_QUESTIONS } from "@/lib/data";
 import { scoreGifts } from "@/lib/scoreGifts";
@@ -53,6 +54,7 @@ export function EmailTemplate({
           );
         })}
       </ol>
+      <SpiritualGiftsExplanationLink language={language} />
       <SpiritualGiftsQuestionResults
         language={language}
         hydratedQuestions={hydratedQuestions}

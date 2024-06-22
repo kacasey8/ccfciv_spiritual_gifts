@@ -10,7 +10,7 @@ export enum SpiritualGifts {
   Shepherding = "Shepherding",
   Faith = "Faith",
   Evangelism = "Evangelism",
-  Apostleship = "Apostleship(missionary/church plant)",
+  Apostleship = "Apostleship (missionary/church planter)",
   ServiceHelps = "Service Helps",
   Mercy = "Mercy",
   Giving = "Giving",

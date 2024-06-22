@@ -13,7 +13,7 @@ type Props = {
 
 export function SpiritualGiftsSlider({ onChange, value }: Props) {
   return (
-    <div className="flex-1">
+    <div className="flex-1 pr-2">
       <Slider
         min={1}
         max={5}

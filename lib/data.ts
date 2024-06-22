@@ -60,6 +60,57 @@ export function translateSpiritualGift(
   return gift;
 }
 
+export const STRINGS = {
+  title: {
+    english: "Spiritual Gifts Survey",
+    chinese: "屬靈恩賜問卷",
+  },
+  overview: {
+    english:
+      "This is not a test, so there are no wrong answers. The Spiritual Gifts Survey consists of statements. Some items reflect concrete actions; other items are descriptive traits; and still others are statements of belief.",
+    chinese:
+      "這不是考試，所以沒有錯誤答案。本屬靈恩賜​​問卷包括80條題目。有些反映你的行動，有些描述你的特質，還有些則是關於你的信仰。",
+  },
+  specificInstructions: {
+    english: [
+      "Select one response you feel best characterizes yourself and place a that number in the blank provided. Or use the slider to select the number.",
+      "Do not spend too much time on any one item  Remember, it is not a test  Usually your immediate response is best",
+      "Please give an answer for each item. Do not skip any items",
+      "Do not ask others how they are answering or how they think you should answer",
+      "Work at your own pace",
+      "The responses recorded here will not be shared outside of CCFCIV Elders and Deacons and Ministry Leaders and will only be used for the purposes of ministry.",
+    ],
+    chinese: [
+      "請按你對題目的反應，在旁邊的空白位置填下適當的數字，或使用滑塊選擇數字。",
+      "不要花太多時間在任何一條題目上。你的直覺反應通常是最好的。",
+      "請回答所有問題，不要跳過任何題目。",
+      "作答期間不要詢問他人的答案或他人對你的意見。",
+      "按適合自己的速度作答。",
+      "此處記錄的回答僅用於事工目的，不會與長老、執事和事工領袖以外的任何人分享。",
+    ],
+  },
+  responseChoiceLabel: {
+    english: "Your response choices are:",
+    chinese: "您的回应选择是：",
+  },
+  choiceInstructions: {
+    english: [
+      "5 — Highly characteristic of me/definitely true for me",
+      "4 — Most of the time this would describe me/be true for me",
+      "3 — Frequently characteristic of me/true for me–about 50 percent of the time",
+      "2 — Occasionally characteristic of me/true for me–about 25 percent of the time",
+      "1 — Not at all characteristic of me/definitely untrue for me",
+    ],
+    chinese: [
+      "5 - 完全同意/ 精確地描述了我",
+      "4 - 基本同意/在大多數情形下正確地描述了我",
+      "3 - 經常同意/ 在50%的情形下正確地描述了我",
+      "2 - 偶爾同意/ 在25%的情形下正確地描述了我",
+      "1 - 完全不同意/我絕對不是這樣的",
+    ],
+  },
+};
+
 export type Question = {
   question: { chinese: string; english: string };
   chinese?: string;

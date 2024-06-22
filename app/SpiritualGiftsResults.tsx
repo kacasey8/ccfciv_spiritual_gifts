@@ -31,7 +31,7 @@ export function SpiritualGiftsResults({ values, language }: Props) {
     }, 200);
   }, [myRef]); // Empty dependency array ensures this effect runs only once
   const seriesData = scoreGifts(values.questions, language).map((giftScore) => {
-    return [giftScore.gift, giftScore.score, null];
+    return [`${giftScore.gift} - ${giftScore.score}`, giftScore.score, null];
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -80,10 +80,17 @@ export function SpiritualGiftsResults({ values, language }: Props) {
 
   const options = {
     title: language === "chinese" ? "屬靈恩賜" : "Spiritual Gifts",
-    chartArea: { width: "100%", height: "450px" },
+    chartArea: {
+      height: "100%",
+      width: "100%",
+      top: "16",
+      left: "16",
+      right: "16",
+      bottom: "70",
+    },
     legend: { position: "none" },
     vAxis: { title: "", textPosition: "in" },
-    bar: { groupWidth: "70%" },
+    bar: { groupWidth: "80%" },
     hAxis: {
       title: language === "chinese" ? "滿分 25 分" : "Score out of 25",
       minValue: 0,
@@ -92,12 +99,13 @@ export function SpiritualGiftsResults({ values, language }: Props) {
         min: 0,
         max: 25,
       },
+      ticks: [0, 5, 10, 15, 20, 25],
     },
   };
 
   return (
     <div ref={myRef} className="flex flex-col items-center gap-4">
-      <div className="px-4">
+      <div className="px-4 pt-12">
         <Chart
           chartType="BarChart"
           width="100%"

@@ -49,12 +49,13 @@ export function SpiritualGiftsForm({ language }: Props) {
     },
   });
   const [isLoading, setIsLoading] = useState(false);
+  const formLanguage = form.watch("language");
 
   useEffect(() => {
-    if (language !== form.getValues("language")) {
+    if (language !== formLanguage) {
       form.setValue("language", language);
     }
-  }, [language, form]);
+  }, [language, formLanguage]);
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);

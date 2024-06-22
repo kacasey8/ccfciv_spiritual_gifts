@@ -23,6 +23,7 @@ import { formSchema } from "@/lib/schema";
 import { BeatLoader } from "react-spinners";
 import { useSearchParams } from "next/navigation";
 import { toast } from "sonner";
+import StickyHeader from "./StickyHeader";
 
 type Props = {
   language: "chinese" | "english";
@@ -84,6 +85,7 @@ export function SpiritualGiftsForm({ language }: Props) {
 
   return (
     <Form {...form}>
+      <StickyHeader language={language} />
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}

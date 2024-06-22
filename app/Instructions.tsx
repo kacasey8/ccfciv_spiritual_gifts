@@ -36,9 +36,6 @@ export function Instructions({ language, setLanguage }: Props) {
           return <li key={instruction}>{instruction}</li>;
         })}
       </div>
-      <p className="text-2xl text-bold pt-8">
-        {STRINGS.responseChoiceLabel[language]}
-      </p>
     </div>
   );
 }

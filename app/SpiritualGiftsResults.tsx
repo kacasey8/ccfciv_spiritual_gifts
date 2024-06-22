@@ -28,7 +28,7 @@ export function SpiritualGiftsResults({ values, language }: Props) {
   useEffect(() => {
     setTimeout(() => {
       myRef.current?.scrollIntoView();
-    }, 100);
+    }, 200);
   }, [myRef]); // Empty dependency array ensures this effect runs only once
   const seriesData = scoreGifts(values.questions, language).map((giftScore) => {
     return [giftScore.gift, giftScore.score, null];
@@ -80,7 +80,7 @@ export function SpiritualGiftsResults({ values, language }: Props) {
 
   const options = {
     title: language === "chinese" ? "屬靈恩賜" : "Spiritual Gifts",
-    chartArea: { width: "100%", height: "400px", left: 200 },
+    chartArea: { width: "100%", height: "400px", left: 85 },
     legend: { position: "none" },
     hAxis: {
       title: language === "chinese" ? "滿分 25 分" : "Score out of 25",

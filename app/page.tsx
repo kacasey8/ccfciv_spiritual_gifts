@@ -3,7 +3,6 @@
 import { SpiritualGiftsForm } from "./SpiritualGiftsForm";
 import { Instructions } from "./Instructions";
 import { Suspense, useState } from "react";
-import StickyHeader from "./StickyHeader";
 
 export default function Home() {
   const userLanguage = typeof window !== "undefined" ? navigator.language : "";
@@ -14,7 +13,6 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-4 md:p-24 pt-0">
       <div className="z-10 w-full max-w-5xl flex-col items-center justify-between font-sans lg:flex">
         <Instructions language={language} setLanguage={setLanguage} />
-        <StickyHeader language={language} />
         <Suspense>
           <SpiritualGiftsForm language={language} />
         </Suspense>

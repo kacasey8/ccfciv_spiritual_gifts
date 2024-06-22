@@ -159,7 +159,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I have a special ability to trust God in difficult situations",
-      chinese: "我有在困難的情況下信靠神特別能力。",
+      chinese: "我有一种特别的能力，在困难的情况下能够信靠神。",
     },
     gift: SpiritualGifts.Faith,
     index: 12,
@@ -253,7 +253,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I am a cheerful giver",
-      chinese: "我樂善好施。",
+      chinese: "我是一个捐得乐意的人。",
     },
     gift: SpiritualGifts.Giving,
     index: 23,
@@ -379,7 +379,7 @@ export const SPIRITUAL_GIFTS_QUESTIONS: Question[] = [
   {
     question: {
       english: "I am a generous giver",
-      chinese: "我是一個慷慨的施予者。",
+      chinese: "我是一个捐得慷慨的人。",
     },
     gift: SpiritualGifts.Giving,
     index: 38,

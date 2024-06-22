@@ -51,7 +51,9 @@ export function SpiritualGiftsForm({ language }: Props) {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    form.setValue("language", language);
+    if (language !== form.getValues("language")) {
+      form.setValue("language", language);
+    }
   }, [language, form]);
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -86,7 +88,7 @@ export function SpiritualGiftsForm({ language }: Props) {
   return (
     <Form {...form}>
       <StickyHeader language={language} />
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 px-1">
         <FormField
           control={form.control}
           name="firstName"

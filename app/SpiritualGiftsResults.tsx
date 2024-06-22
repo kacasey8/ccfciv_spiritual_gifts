@@ -80,8 +80,10 @@ export function SpiritualGiftsResults({ values, language }: Props) {
 
   const options = {
     title: language === "chinese" ? "屬靈恩賜" : "Spiritual Gifts",
-    chartArea: { width: "100%", height: "400px", left: 85 },
+    chartArea: { width: "100%", height: "450px" },
     legend: { position: "none" },
+    vAxis: { title: "", textPosition: "in" },
+    bar: { groupWidth: "70%" },
     hAxis: {
       title: language === "chinese" ? "滿分 25 分" : "Score out of 25",
       minValue: 0,
@@ -95,11 +97,11 @@ export function SpiritualGiftsResults({ values, language }: Props) {
 
   return (
     <div ref={myRef} className="flex flex-col items-center gap-4">
-      <div>
+      <div className="px-4">
         <Chart
           chartType="BarChart"
           width="100%"
-          height="400px"
+          height="450px"
           data={data}
           options={options}
         />

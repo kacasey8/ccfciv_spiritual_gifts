@@ -88,8 +88,8 @@ export function SpiritualGiftsForm({ language }: Props) {
 
   return (
     <Form {...form}>
-      <StickyHeader language={language} />
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 px-1">
+        <StickyHeader language={language} />
         <FormField
           control={form.control}
           name="firstName"
